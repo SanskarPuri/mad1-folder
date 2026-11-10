@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Jinja templating</title>
+	</head>
+	<body>
+		<h1>Get User Details</h1>
+		
+		{% for user in users.values() %}
+		<ul>
+			<li><h4>Username: {{ user[0] }}</h4></li>
+			<li><h4>Useremail: {{ user[1] }}</h4></li>
+			<li><h4>UserPosts: {{ user[2] }}</h4></li>
+			<li><h4>UserLikes: {{ user[3] }}</h4></li>
+		</ul>
+		<hr>
+		{% endfor %}
+
+		<h2>User with highest Likes</h2>
+		<h4>Maximum likes gained: {{ top_user.likes }} by {{ top_user.name }}</h4>
+
+	</body>
+</html>
