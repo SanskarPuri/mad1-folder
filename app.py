@@ -52,5 +52,20 @@ def user_details():
 
     return render_template("jinja.html", users=users, top_user=highest)
 
+#Accessing the home, contact and about route from templates to test the working of extends.
+
+@app.route("/home")
+def home_route():
+    return render_template("home.html")
+
+@app.route("/about")
+def about_route():
+    return render_template("about.html")
+
+@app.route("/contact")
+def contact_route():
+    return render_template("contact.html")
+
+
 if __name__=="__main__":
     app.run(debug=True, port=8080)
